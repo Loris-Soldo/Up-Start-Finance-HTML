@@ -99,7 +99,8 @@
                 let button = document.getElementById("button_page");
                 button.addEventListener('click', event => {
                     analytics.track('Button Clicked', {
-                        type: 'Get Started'
+                        type: 'Get Started',
+                        property_test: 'Value'
                     });;
                 });
               </script>
