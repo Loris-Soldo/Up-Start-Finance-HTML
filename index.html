@@ -82,16 +82,25 @@
               <span class="home-text04 navbar-Link">Features</span>
               <span class="home-text05 navbar-Link">Blog</span>
               <span class="home-text06 navbar-Link">Pricing</span>
-              <button class="button-secondary button">Log in</button>
-              <a id="button" href="page-1.html" class="home-navlink button button-primary">
+              <button id="button identify" class="button-secondary button">Log in</button>
+              <a id="button page" href="page-1.html" class="home-navlink button button-primary">
                 Get started
               </a>
               <script>
-                let button = document.getElementById("button");
+                let button = document.getElementById("button page");
                 button.addEventListener('click', event => {
                     analytics.track('Button Clicked', {
                         type: 'Get Started'
                     });;
+                });
+              </script>
+              <script>
+                let button = document.getElementById("button identify");
+                button.addEventListener('click', event => {
+                    analytics.identify("test_id", {
+                        name: "Loris Soldo",
+                        email: "loris.soldo@stackz.fr"
+                    });
                 });
               </script>
             </div>
